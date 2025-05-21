@@ -25,6 +25,11 @@ model = LinearRegression()
 # Training the model
 model.fit(X_train, y_train)
 
+# Evaluate model performance
+y_pred = model.predict(X_test)
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
 
 # Initialize the Dash app
 app = dash.Dash(__name__)
@@ -84,5 +89,7 @@ def update_output(n_clicks, distance_to_mrt, num_convenience_stores, latitude, l
     return ''
 
 # Run the app
-if __name__ == '__main__':
+if __name__ == "__main__":
+    print("Mean Squared Error:", mse)
+    print("R^2 Score:", r2)
     app.run(debug=True)
