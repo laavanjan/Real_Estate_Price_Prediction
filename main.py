@@ -38,7 +38,7 @@ app.title = "Real Estate Price Predictor"
 # Define the layout of the app
 app.layout = html.Div([
     html.Div([
-        html.H1("Real Estate Price Prediction", style={'text-align': 'center'}),
+        html.H1("Real Estate Price Prediction", style={'textAlign': 'center'}),
         
         html.Div([
             dcc.Input(id='distance_to_mrt', type='number', placeholder='Distance to MRT Station (meters)',
@@ -50,19 +50,30 @@ app.layout = html.Div([
             dcc.Input(id='longitude', type='number', placeholder='Longitude',
                       style={'margin': '10px', 'padding': '10px'}),
             html.Button('Predict Price', id='predict_button', n_clicks=0,
-                        style={'margin': '10px', 'padding': '10px', 'background-color': '#007BFF', 'color': 'white'}),
-        ], style={'text-align': 'center'}),
+                        style={'margin': '10px', 'padding': '10px', 'backgroundColor': '#007BFF', 'color': 'white'}),
+        ], style={'textAlign': 'center'}),
 
-        html.Div(id='prediction_output', style={'text-align': 'center', 'font-size': '20px', 'margin-top': '20px'})
+        html.Div(id='prediction_output', style={'textAlign': 'center', 'fontSize': '20px', 'marginTop': '20px'})
     ], style={
         'width': '50%',
         'margin': '0 auto',
         'border': '2px solid #007BFF',
         'padding': '20px',
-        'border-radius': '10px',
-        'box-shadow': '2px 2px 10px rgba(0,0,0,0.1)'
-    })
+        'borderRadius': '10px',
+        'boxShadow': '2px 2px 10px rgba(0,0,0,0.1)'
+    }),
+    html.Footer("© Laavanjan | Faculty of IT @B22", 
+        style={
+            'textAlign': 'center',
+            'padding': '20px',
+            'marginTop': '40px',
+            'color': '#333',
+            'fontSize': '14px',
+            'borderTop': '1px solid #ccc'
+        }
+    )
 ])
+
 
 # Define callback to update output
 @app.callback(
