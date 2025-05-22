@@ -2,7 +2,7 @@
 # 🏠 Real Estate Price Prediction
 
 This project predicts the **house price per unit area** based on various real estate features using a **Linear Regression** model. The application is built with **Dash**, a Python framework for building interactive web apps.
-
+![House Price Graph](img.png)
 ## 🚀 Features
 
 - Interactive web interface to input real estate data:
